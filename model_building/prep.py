@@ -18,10 +18,10 @@ Xtrain, Xtest, ytrain, ytest = train_test_split(
     X, y, test_size=0.2, random_state=42, stratify=y
 )
 
-Xtrain.to_csv("Xtrain.csv", index=False)
-Xtest.to_csv("Xtest.csv", index=False)
-ytrain.to_csv("ytrain.csv", index=False)
-ytest.to_csv("ytest.csv", index=False)
+Xtrain.to_csv("data/Xtrain.csv", index=False)
+Xtest.to_csv("data/Xtest.csv", index=False)
+ytrain.to_csv("data/ytrain.csv", index=False)
+ytest.to_csv("data/ytest.csv", index=False)
 
 print("Data prepared: train/test splits written.")
 print("Type values kept as:", sorted(X["Type"].unique()))
