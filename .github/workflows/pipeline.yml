@@ -69,7 +69,7 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: data-splits          # brings Xtrain/Xtest/ytrain/ytest from Job 2
-          path: data/    
+          path: data/
       - name: Start MLflow tracking server
         run: |
           nohup mlflow ui --host 0.0.0.0 --port 5000 &   # Run MLflow UI in the background
