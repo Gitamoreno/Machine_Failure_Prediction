@@ -15,10 +15,10 @@ mlflow.set_tracking_uri("http://localhost:5000")
 mlflow.set_experiment("mlops-training-experiment")
 
 # Xtrain/Xtest/ytrain/ytest are downloaded from the previous job's artifact
-Xtrain = pd.read_csv("Xtrain.csv")
-Xtest  = pd.read_csv("Xtest.csv")
-ytrain = pd.read_csv("ytrain.csv").squeeze()
-ytest  = pd.read_csv("ytest.csv").squeeze()
+Xtrain = pd.read_csv("data/Xtrain.csv")
+Xtest  = pd.read_csv("data/Xtest.csv")
+ytrain = pd.read_csv("data/ytrain.csv").squeeze()
+ytest  = pd.read_csv("data/ytest.csv").squeeze()
 
 # One-hot encode 'Type' and scale numeric features
 numeric_features = ["Air temperature", "Process temperature",
