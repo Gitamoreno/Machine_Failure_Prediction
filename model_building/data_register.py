@@ -1,6 +1,7 @@
 import pandas as pd
 
-RAW_PATH = "/content/drive/MyDrive/MLOPs/MLS2/data/machine-failure-prediction.csv"
+#RAW_PATH = "/content/drive/MyDrive/MLOPs/MLS2/data/machine-failure-prediction.csv"
+RAW_PATH = "data/machine-failure-prediction.csv"
 
 # Load the raw dataset
 df = pd.read_csv(RAW_PATH)
