@@ -1,9 +1,9 @@
-# for data manipulation
+# importing necessary libraries
 import pandas as pd
 from sklearn.preprocessing import StandardScaler, OneHotEncoder
 from sklearn.compose import make_column_transformer
 from sklearn.pipeline import make_pipeline
-# for model training, tuning, and evaluation
+
 import xgboost as xgb
 from sklearn.model_selection import GridSearchCV
 from sklearn.metrics import classification_report
@@ -101,7 +101,7 @@ with mlflow.start_run():
 
     # Save next to app.py so the Streamlit app can load it directly, and log
     # it as an MLflow artifact for traceability
-    #model_path = "/content/drive/MyDrive/MLOPs/MLS2/deployment/best_machine_failure_model_v1.joblib"
+   
     model_path = "deployment/best_machine_failure_model_v1.joblib"
     joblib.dump(best_model, model_path)
     mlflow.log_artifact(model_path, artifact_path="model")
